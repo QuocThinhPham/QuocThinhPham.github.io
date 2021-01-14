@@ -17,10 +17,10 @@ countdown = () => {
   let m = Math.floor((gap % hour) / minute);
   let w = Math.floor((gap % minute) / seconds);
 
-  document.querySelector("div#day").innerHTML = d;
-  document.querySelector("div#hour").innerHTML = h;
-  document.querySelector("div#minute").innerHTML = m;
-  document.querySelector("div#seconds").innerHTML = w;
+  document.querySelector("div#day").innerHTML = (d < 10) ? '0' + d : d;
+  document.querySelector("div#hour").innerHTML = (h < 10) ? '0' + h : h;
+  document.querySelector("div#minute").innerHTML = (m < 10) ? '0' + m : m;
+  document.querySelector("div#seconds").innerHTML = (w < 10) ? '0' + w : w;
 };
 
 setInterval(() => {
